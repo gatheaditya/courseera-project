@@ -10,15 +10,19 @@ $scope.displayArraylength= function ()
   {
     $scope.length="";
   };
-  var length =noOfItems($scope.name);
-  $scope.length=length;
+
+ var length= checkIfEmpty($scope.name);
+    $scope.length=length;
 }
 
-function noOfItems(name)
+
+function checkIfEmpty(string)
 {
-  var items = name.length;
-  return items;
+var noofitems= string.split(",");
+return noofitems.length;
 }
+
+
  };
 
 
