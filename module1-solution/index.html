@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
+    body{
+            background-color: linear-gradient(rgba(24, 87, 188,0.7),rgba(0,0,0,0.7  ));
+
+      color:white;
+    }
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
 
@@ -15,18 +20,19 @@
   <script src="js/app.js"></script>
    <div class="container">
      <h1>Lunch Checker</h1>
-<div ng-controller="LunchcheckController">
-         <div class="form-group">
+<div ng-controller="LunchcheckController"
+>
+         <div class="form-group col-xs-3">
              <input id="lunch-menu" type="text"   ng-model="name"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
          <div class="form-group">
-             <button class="btn btn-default" ng-click="">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="displayArraylength();">Check If Too Much</button>
          </div>
          <div class="form-group message">
            <!-- Your message can go here. -->
-{{name}}
+{{length}}
          </div>
    </div>
 </div>
