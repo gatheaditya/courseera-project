@@ -3,7 +3,9 @@
 angular.module('Lunchcheck', [])
 .controller('LunchcheckController', LunchcheckController);
 
-function LunchcheckController ($scope,$injector) {
+LunchcheckController.$inject=['$scope'];
+
+function LunchcheckController ($scope) {
 
 $scope.displayArraylength= function ()
 {
@@ -60,26 +62,11 @@ function checkIfEmpty(string,value)
   }
 return length;
 }
-$scope.myObj =function styleElements(string)
-{
-  if(string==0)
-  $scope.myObj = {
-    "color" : "green",    
-    "padding" : "50px",
-     "border":"1px solid green"
-  }
-  else(string==1)
-  {
-    $scope.myObj = {
-    "color" : "red",    
-    "padding" : "50px",
-     "border":"1px solid green"
-  }
-  return $scope.myobj;
-  }
-}
 
+  
 
 
  };
+
+ 
 })();
