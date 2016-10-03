@@ -7,13 +7,25 @@ function LunchcheckController ($scope, $injector) {
 
 $scope.displayArraylength= function ()
 {
+  if($scope.name!=null)
+  {
  var length= checkIfEmpty($scope.name);
     $scope.length=length;
   }
+  else
+  {
+     $scope.length="PLEASE ENTER DATA";
+  }
+  }
+
 function checkIfEmpty(string)
 {
-  if(string!=null)
+  if(string==0|| string==undefined)
   {
+    
+   length="PLEASE ENTER DATA";
+  }
+  else {
     var noOfItems= string.split(",");
     if(noOfItems.length>3)
     {
@@ -23,9 +35,6 @@ function checkIfEmpty(string)
     length="ENJOY!"
     }
 
-  }
-  else {
-length="PLEASE ENTER DATA";
   }
 return length;
 }
