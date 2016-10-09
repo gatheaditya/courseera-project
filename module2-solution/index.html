@@ -28,26 +28,24 @@
   <div class="container" ng-app="ShoppingList">
   <h1>Shopping List Check Off</h1>
 
-  <div class="row" ng-controller="ToBuyController as p ">
+  <div class="row" ng-controller="ToBuyController as toBuy">
     <!-- To Buy List -->
     <div class="col-md-6">
-     <h2>To Buy:</h2>
-     <ul>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+     <h2> List To Buy</h2>
+     <ul ng-repeat="item in toBuy.items.item">
+       <li>{{ item.name+" Qty "+ item[$index].qty }} <button class="btn btn-default" ng-click="toBuy.removeItem"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
-     <div class="emptyMessage">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController as c ">
-      <input type="text" name="name" value="" ng-model="c.name2">
+    <div class="col-md-6" ng-controller="AlreadyBoughtController as bought">
 
-     <h2>Already Bought:</h2>
-     <ul>
-       <li>Bought 10 cookies {{ p.name2 +" " +c.name2 }}</li>
-     </ul>
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <h2>Already Bought</h2>
+     <ul ng-repeat="item in bought.items.item">
+       <li>{{item.name+" Qty "+item.qty }} </li>
+       </ul>
+     <div class="emptyMessage" ng-if="">Nothing bought yet.</div>
     </div>
   </div>
 </div>
