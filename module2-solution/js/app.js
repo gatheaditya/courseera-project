@@ -30,13 +30,26 @@ function ShoppingListService()
   var service = this;
   var toBuy ={
     item:[{
-    name:'name1',
-    qty:3
+    name:'cokkies',
+    qty:1
   },
   {
-    name:'name2',
-    qty:3
-  }]
+  name:'cackes',
+  qty:2
+},
+{
+name:'ice-cream',
+qty:3
+},
+{
+name:'cokkies',
+qty:4
+},
+{
+name:'cokkies',
+qty:5
+}
+]
 };
 var alreadyBought =
 {
