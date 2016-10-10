@@ -9,8 +9,8 @@
  {
    var toBuy = this;
   toBuy.items= ShoppingListService.getToBuy();
-  toBuy.removeItem = function (itemIndex) {
-    ShoppingListService.removeItem(itemIndex);
+  toBuy.shiftItems = function (itemIndex) {
+    ShoppingListService.shiftItems(itemIndex);
    };
 
 
@@ -22,7 +22,7 @@
  {
    var bought = this;
   bought.items  = ShoppingListService.getBought();
-bought.items=ShoppingListService.getBought();
+
 
  }
 function ShoppingListService()
@@ -40,14 +40,7 @@ function ShoppingListService()
 };
 var alreadyBought =
 {
-  item:[{
-  name:'name1',
-  qty:3
-},
-{
-  name:'name2',
-  qty:3
-}]
+  item:[]
 
 };
 
@@ -59,12 +52,16 @@ service.additem= function (name,qty)
  }
  item.push(item);
 }
-service.removeItem = function (itemIndex) {
+service.shiftItems = function (itemIndex) {
+
+  var name=toBuy.item[itemIndex].name;
+  var qty=toBuy.item[itemIndex].qty;
   var  item ={
     name:name,
     qty:qty
   }
-  item.push(item);
+  alreadyBought.item.push(item);
+  toBuy.item.splice(itemIndex,1);
    };
 service.getToBuy = function () {
      return toBuy;
@@ -72,6 +69,7 @@ service.getToBuy = function () {
   service.getBought = function () {
         return alreadyBought;
       };
+
 
 }
 })();
