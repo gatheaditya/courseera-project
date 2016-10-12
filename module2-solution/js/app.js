@@ -11,14 +11,25 @@ function NarrowItDownController(MenuSearchService)
 var found=[];
 var list = this;
 
+list.getItems = MenuSearchService.getMatchedMenuItems();
+console.log(list.getItems);
+
 }
 
+MenuSearchService.$inject['$http']
 function MenuSearchService()
 {
   var service= this;
 
-service.getMatchedMenuItems(searchItem)
+service.getMatchedMenuItems()
 {
+  var response = $http({
+      method:'GET',
+      url:'https://davids-restaurant.herokuapp.com/menu_items.json'
+    });
+
+    return response;
+  }
 
 }
 
