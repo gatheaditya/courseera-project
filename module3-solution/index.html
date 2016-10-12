@@ -32,29 +32,23 @@
   </head>
 <body>
   <div class="container" ng-app="ShoppingList">
-  <h1>Shopping List Check Off</h1>
-
-  <div class="row" ng-controller="ToBuyController as toBuy">
-    <!-- To Buy List -->
-    <div class="col-md-6">
-     <h2> List To Buy</h2>
-     <ul ng-repeat="item in toBuy.items.item">
-       <li>{{ item.name+" Qty "+ item.qty }} <button class="btn btn-default" ng-click="toBuy.shiftItems($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-     </ul>
-     <div class="emptyMessage " ng-show="!toBuy.isEmpty">Everything is bought!</div>
-    </div>
-
-    <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController as bought">
-
-     <h2>Already Bought</h2>
-     <ul ng-repeat="item in bought.items.item">
-       <li>{{item.name+" Qty "+item.qty }} </li>
-       </ul>
-     <div class="emptyMessage" ng-show="bought.isEmpty">Nothing bought yet.</div>
+    <div class="container">
+      <h1>Restuarant App</h1>
+  <div ng-controller="LunchcheckController">
+          <div class="form-group col-xs-8">
+              <input id="lunch-menu" type="text"   ng-model="name"
+              placeholder="list comma separated dishes you usually have for lunch"
+              class="form-control">
+          </div>
+          <div class="form-group">
+              <button class="btn btn-default" ng-click="">Check If Too Much</button>
+          </div>
+          <div class="form-group message" >
+            <!-- Your message can go here. -->
+  <p ng-style="myObj"></p>
+          </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
