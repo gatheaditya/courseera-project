@@ -27,15 +27,17 @@
       color:white;
       background-position: center;
       position: fixed;
+      background-repeat: no-repeat;
   }
     </style>
   </head>
-
-
+<!--
+https://davids-restaurant.herokuapp.com/menu_items.json -->
 
 
 <body>
-   <div class="container">
+   <div class="container" ng-app="NarrowItDownApp">
+     <div ng-controller="NarrowItDownController as list">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group col-lg-8">
@@ -47,6 +49,7 @@
 
     <!-- found-items should be implemented as a component -->
     <found-items found-items="...." on-remove="...."></found-items>
+  </div>
   </div>
 
 </body>
