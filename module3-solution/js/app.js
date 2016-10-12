@@ -2,23 +2,32 @@
   'use strict';
   angular.module("NarrowItDownApp",[])
   .controller('NarrowItDownController', NarrowItDownController)
-  .service('MenuSearchService',MenuSearchService);
+  .factory('MenuSearchFactory', MenuSearchFactory);
   // .directive('NarrowItDownControllerDirective',NarrowItDownControllerDirective);
 
-NarrowItDownController.$inject=['MenuSearchService'];
-function NarrowItDownController(MenuSearchService)
+NarrowItDownController.$inject=['MenuSearchFactory','$http'];
+function NarrowItDownController(MenuSearchFactory,$http)
 {
 var found=[];
+var MenuSearchService =  MenuSearchFactory($http);
 var list = this;
-list.getItems = MenuSearchService.getMatchedMenuItems();
-console.log(list.getItems);
+var promise = MenuSearchService.getMatchedMenuItems();
+     promise.then(function (response) {
+     list.getItems = response.data;
+     console.log(list.getItems.menu_items[0].id);
+
+   })
+   .catch(function (error) {
+     console.log("Something went terribly wrong.");
+   });
+
 }
 
-MenuSearchService.$inject=['$http'];
+MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
 {
   var service= this;
-service.getMatchedMenuItems= function()
+service.getMatchedMenuItems  = function()
 {
   var response = $http({
       method:'GET',
@@ -26,8 +35,16 @@ service.getMatchedMenuItems= function()
     });
 
     return response;
-  }
+  };
+};
+function MenuSearchFactory()
+{
+var factory = function($http){
+  return new MenuSearchService($http);
+};
+return factory;
+};
 
-}
+
 
 })();
