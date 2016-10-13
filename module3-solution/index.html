@@ -31,20 +31,23 @@
   }
     </style>
   </head>
-<!--https://davids-restaurant.herokuapp.com/menu_items.json -->
-
-
 <body>
    <div class="container" ng-app="NarrowItDownApp">
      <div ng-controller="NarrowItDownController as list">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group col-lg-8">
-      <input type="text" placeholder="search term" class="form-control">
+      <input type="text" placeholder="search term" class="form-control" ng-model="list.searchitem">
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-primary">Narrow It Down For Me!</button>
+      <button class="btn btn-primary" ng-click="list.itemFound();">Narrow It Down For Me!</button>
     </div>
+{{ "Total items In list  "+  list.foundItem}}
+    <!-- <div ng-repeat="items in list.foundItem">
+    <ul >
+    <li>{{items}}<button class="btn btn-danger">Don't want this one!</button></li>
+    </ul>
+    </div> -->
 
     <!-- found-items should be implemented as a component -->
     <found-items found-items="...." on-remove="...."></found-items>
