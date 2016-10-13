@@ -10,7 +10,7 @@
   var item=this;
 
   item.toBuy=ShoppingListSrvice.gettoBuyItems();
-   item.shift=ShoppingListSrvice.shiftItem();
+   item.shift=ShoppingListSrvice.shiftItems();
 
  }
    AlreadyBoughtController.$inject=['ShoppingListSrvice'];
@@ -34,7 +34,10 @@ item:[{name:"name1",qty:1},
 
 ]};
 
-
+ var bought = 
+{
+item:[]
+};
 
 
 service.gettoBuyItems= function()
@@ -47,28 +50,16 @@ service.getboughtItems= function()
    return bought;
 }
 
-
-
-service.shiftItem= function (name,qty,indexof)
+service.shiftItems= function()
 {
-  var bought = 
-{
-item:[]
-};
-    
-  var newitem = {
-      name: name ,
-      quantity:qty 
+   return bought;
 }
-bought.item.push(this.newItem);
+
+
+
 
 
 }
-
-return this.bought;
-
-
- }
 
 
 
