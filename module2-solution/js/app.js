@@ -3,7 +3,7 @@
   angular.module("ShoppingList",[])
   .controller('ToBuyController', ToBuyController)
   .controller('AlreadyBoughtController', AlreadyBoughtController )
-<<<<<<< HEAD
+
   .service('ShoppingListSrvice',ShoppingListSrvice);
 //ToBuyController
   ToBuyController.$inject=['ShoppingListSrvice'];
@@ -69,11 +69,6 @@ service.shiftItems= function(indexof)
 
   }
 
-
-
-
-
-=======
   .service('ShoppingListService',ShoppingListService);
   ToBuyController.$inject=['ShoppingListService'];
  function ToBuyController(ShoppingListService)
@@ -165,15 +160,5 @@ service.getToBuy = function () {
         service.tobuyIsEmpty = function() {
           return tobuy.item.length === 0;
         };
->>>>>>> 0a54c7a68cda9073e4acb9ee98f6b664d2a1791f
-
 }
-
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 0a54c7a68cda9073e4acb9ee98f6b664d2a1791f
 })();
