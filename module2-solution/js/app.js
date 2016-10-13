@@ -4,23 +4,30 @@
   .controller('ToBuyController', ToBuyController)
   .controller('AlreadyBoughtController', AlreadyBoughtController )
   .service('ShoppingListSrvice',ShoppingListSrvice);
+//ToBuyController
   ToBuyController.$inject=['ShoppingListSrvice'];
  function ToBuyController(ShoppingListSrvice)
  {
   var item=this;
 
   item.toBuy=ShoppingListSrvice.gettoBuyItems();
-   item.shift=ShoppingListSrvice.shiftItems();
+   item.shift= function(indexof)
+   {
+     ShoppingListSrvice.shiftItems();
+   }
+  
 
  }
+//AlreadyBoughtControllert
+
    AlreadyBoughtController.$inject=['ShoppingListSrvice'];
  function AlreadyBoughtController(ShoppingListSrvice)
  {
-  var list = this;   
+  var list=this;
   list.bought=ShoppingListSrvice.getboughtItems();
 
- }
-
+}
+//////// ShoppingListSrvice service begins here
  function ShoppingListSrvice()
  {
 
@@ -35,9 +42,7 @@ item:[{name:"name1",qty:1},
 ]};
 
  var bought = 
-{
-item:[]
-};
+{item:[]}
 
 
 service.gettoBuyItems= function()
@@ -50,10 +55,19 @@ service.getboughtItems= function()
    return bought;
 }
 
-service.shiftItems= function()
+service.shiftItems= function(indexof)
 {
-   return bought;
-}
+  var name=service.tobuy.item[0].name;
+  var qty=service.tobuy.item[0].qty;
+    var newItem={ 
+    name:name,
+    qty:qty
+  }
+   bought.item.push(newItem) ;
+
+
+  }
+
 
 
 
