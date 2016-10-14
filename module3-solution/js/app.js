@@ -58,9 +58,11 @@ for(i=0;i<items.length;i++)
   var searchitem =searchitem.toLowerCase();
   var item = items[i].name.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
-  found.push(items[i].name);
-}
+  found.push({name:items[i].name,shortname:items[i].short_name
+  });
 
+}
+console.log(found);
   return found;
 }
 

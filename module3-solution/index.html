@@ -45,7 +45,7 @@
 
     <div>
     <ul ng-repeat="items in list.foundItem track by $index">
-    <li>{{items}}<button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button></li>
+    <li>{{items.name +'('+items.shortname +')'}}<button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button></li>
     </ul>
     {{ "Total items In list  "+  list.foundItem.length}}
     </div>
