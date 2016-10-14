@@ -66,6 +66,7 @@ for(i=0;i<items.length;i++)
 
 service.removeItem = function(index)
 {
+  index = index++;
 found.splice(index,1);
 
 }
