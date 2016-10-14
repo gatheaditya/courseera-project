@@ -18,14 +18,20 @@ var promise = MenuSearchService.getMatchedMenuItems();
 list.itemFound = function(){
 
    promise.then(function (response) {
+<<<<<<< HEAD
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
+=======
+     list.getItems = response.data.menu_items;  
+     list.getNoOfItems=response.data.menu_items.length;
+     list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);   
+>>>>>>> 98a68d1ff69ae99ee89896e26d44c41d935ad54a
    })
    .catch(function (error) {
      console.log("Something went terribly wrong.");
    });
-
+   
 }
 }
 //meanuservice
@@ -43,7 +49,11 @@ for (i = 0; i < items.length; i++) {
     if (searchitem != items[i].name) { continue; }
     found.push( items[i].id) ;
     console.log(items[i].name);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 98a68d1ff69ae99ee89896e26d44c41d935ad54a
 
 }
 
@@ -60,7 +70,11 @@ service.getMatchedMenuItems  = function()
 
     var data = response;
     return data;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 98a68d1ff69ae99ee89896e26d44c41d935ad54a
   }
 
 
@@ -81,3 +95,4 @@ return factory;
 
 
 })();
+

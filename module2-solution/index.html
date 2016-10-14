@@ -27,11 +27,35 @@
       height:800px;
       color:white;
   }
+
     </style>
   </head>
 <body>
   <div class="container" ng-app="ShoppingList">
   <h1>Shopping List Check Off</h1>
+
+
+  <div class="row" ng-controller="ToBuyController as item ">
+    <!-- To Buy List -->
+    <div class="col-md-6">
+     <h2> List of Items To Buy</h2>
+     <ul ng-repeat="x in  item.toBuy.item">
+       <li>{{x.name}} Qty {{x.qty}} <button class="btn btn-default" ng-click="item.shift($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+        </ul>
+
+
+     <div class="emptyMessage" ng-if="">Everything is bought!</div>
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="col-md-6" ng-controller="AlreadyBoughtController as list ">
+
+     <h2>Already Bought</h2>
+     <ul ng-repeat="list in  list.bought.item">
+       <li>{{list.name}} Qty {{list.qty}} </li>
+        </ul>
+
+     <div class="emptyMessage" ng-if="">Nothing bought yet.</div>
 
   <div class="row" ng-controller="ToBuyController as toBuy">
     <!-- To Buy List -->
@@ -51,6 +75,7 @@
        <li>{{item.name+" Qty "+item.qty }} </li>
        </ul>
      <div class="emptyMessage" ng-show="bought.isEmpty">Nothing bought yet.</div>
+
     </div>
   </div>
 </div>
