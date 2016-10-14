@@ -23,12 +23,9 @@
         color: green;
       }
       body{
-      background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7  )),url('images/1.jpg');
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3  )),url('images/1.jpg');
       color:white;
-      background-position:center;
-
-
-  }
+        }
     </style>
   </head>
 <body>
@@ -42,12 +39,13 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="list.itemFound();">Narrow It Down For Me!</button>
     </div>
-{{ "Total items In list  "+  list.foundItem}}
-    <!-- <div ng-repeat="items in list.foundItem">
-    <ul >
+
+    <div >
+    <ul ng-repeat="items in list.foundItem track by $index">
     <li>{{items}}<button class="btn btn-danger">Don't want this one!</button></li>
     </ul>
-    </div> -->
+    {{ "Total items In list  "+  list.foundItem.length}}
+    </div>
 
     <!-- found-items should be implemented as a component -->
     <found-items found-items="...." on-remove="...."></found-items>

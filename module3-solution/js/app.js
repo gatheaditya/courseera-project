@@ -39,13 +39,15 @@ service.matchFoundItems= function(searchitem,items)
 {
  var found=[];
   var i="";
-for (i = 0; i < items.length; i++) {
-    if (searchitem != items[i].name) { continue; }
-    found.push( items[i].id) ;
-    console.log(items[i].name);
-
+for(i=0;i<items.length;i++)
+{
+  var searchitem =searchitem.toLowerCase();
+  var item = items[i].name.toLowerCase();
+  if(item.search(searchitem)==-1){continue;}
+  found.push(items[i].name);
 
 }
+
 
   return found;
 }
