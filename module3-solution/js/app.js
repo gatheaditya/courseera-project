@@ -21,10 +21,22 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
+
    })
    .catch(function (error) {
      console.log("Something went terribly wrong.");
    });
+
+
+}
+list.removeItem = function(){
+promise.then(function(response){
+   MenuSearchService.removeItem();
+   console.log('done');
+})
+  .catch(function(error){
+});
+
 
 }
 }
@@ -33,25 +45,29 @@ MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
 {
   var service= this;
+  var found=[];
   //function to get menu items
 
 service.matchFoundItems= function(searchitem,items)
 {
- var found=[];
+
   var i="";
+
 for(i=0;i<items.length;i++)
 {
   var searchitem =searchitem.toLowerCase();
   var item = items[i].name.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
   found.push(items[i].name);
-
 }
-
 
   return found;
 }
 
+service.removeItem = function(index)
+{
+found.splice(index,1);
+}
 
 service.getMatchedMenuItems  = function()
 {
