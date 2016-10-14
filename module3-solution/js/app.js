@@ -29,10 +29,10 @@ list.itemFound = function(){
 
 
 }
-list.removeItem = function(){
+list.removeItem = function(index){
 promise.then(function(response){
-   MenuSearchService.removeItem();
-   console.log('done');
+   MenuSearchService.removeItem(index);
+
 })
   .catch(function(error){
 });
@@ -67,6 +67,7 @@ for(i=0;i<items.length;i++)
 service.removeItem = function(index)
 {
 found.splice(index,1);
+
 }
 
 service.getMatchedMenuItems  = function()
