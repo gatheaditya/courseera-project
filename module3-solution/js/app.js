@@ -22,7 +22,10 @@ templateUrl:'foundList.html'
   };
   return ddo;
 }
-
+function isEmptyController()
+{
+  
+}
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
