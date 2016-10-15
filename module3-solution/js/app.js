@@ -28,7 +28,7 @@ templateUrl:'foundList.html',
 function isEmptyController()
 {
 var list = this;
- console.log(list.items);
+ console.log(list.itemsList);
 
 }
 
