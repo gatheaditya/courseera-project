@@ -12,7 +12,7 @@ function foundItems()
 
 templateUrl:'foundList.html',
 scope:{
- foundList: '=foundList'
+ list: '=foundList'
 },
  // controller:isEmpty,
  // controllerAs:'list1',
