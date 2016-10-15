@@ -84,9 +84,7 @@ found=[];
 
 }//end if
 else {
-  found.push({
-    name:'nothing found'
-  })
+  found=[];
 }
 console.log(found);
   return found;
