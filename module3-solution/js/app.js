@@ -15,6 +15,7 @@ function foundItems()
 scope:{
   list: '<foundList'
  }
+ controller:'isEmptyController as list'
 
   };
   return ddo;
