@@ -24,11 +24,13 @@ templateUrl:'foundList.html'
 }
 function isEmptyController(){
 var list = this;
+  console.log(list.itemFound);
 list.isEmpty = function()
 {
   if(list.itemFound.length==0)
   {
     return true;
+
   }
   return false;
 }
@@ -52,7 +54,7 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-     console.log(list.foundItem);
+
    })
    .catch(function (error) {
      console.log("Something went terribly wrong.");
