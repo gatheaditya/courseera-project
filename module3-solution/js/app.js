@@ -45,6 +45,7 @@
 
 
 //isEmpty funtion
+ShoppingListDirectiveController.$inject=['MenuSearchFactory'];
 function ShoppingListDirectiveController()
 {
 var list = this;
