@@ -24,7 +24,7 @@ templateUrl:'foundList.html'
 
 }
 isEmptyController.$inject=['MenuSearchFactory','$http']
-function isEmptyController()
+function isEmptyController(MenuSearchFactory)
 {
 var list = this;
 list.empty = function()
