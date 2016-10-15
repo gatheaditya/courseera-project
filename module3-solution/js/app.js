@@ -14,7 +14,7 @@ function foundItems()
 
 scope:{
  list: '<foundList',
-
+ items:'=itemList'
 },
 controller:'isEmptyController as list',
 bindToController: true,
@@ -27,7 +27,6 @@ var list = this;
 
 list.isEmpty = function()
 {
-  console.log();
 
 }
 
