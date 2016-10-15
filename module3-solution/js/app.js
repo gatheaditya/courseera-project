@@ -65,26 +65,25 @@ service.matchFoundItems= function(searchitem,items)
 {
 
 if(searchitem.length>0)
-{
+{//begin if
   var i="";
 found=[];
   for(i=0;i<items.length;i++)
-{
+{//begin for loop
   var searchitem =searchitem.toLowerCase();
   var item = items[i].name.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
-  found.push({name:items[i].name,
+  found.push
+  ({
+    name:items[i].name,
     shortname:items[i].short_name,
     desc:items[i].description
   });
 
-}
-else {
-  {
-    found=[];
-  }
-}
-}
+}//end for loop
+
+}//end if
+
 console.log(found);
   return found;
 }
