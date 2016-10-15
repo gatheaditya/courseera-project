@@ -12,7 +12,8 @@ function foundItems()
   var ddo = {
 
 scope:{
-  list: '<foundList'
+  list: '<foundList',
+  items:'=items'
 },
  controller:'isEmptyController as list',
  templateUrl:'foundList.html',
@@ -26,6 +27,7 @@ scope:{
 function isEmptyController()
 {
 var list = this;
+console.log(list.items.length);
 
 }
 
