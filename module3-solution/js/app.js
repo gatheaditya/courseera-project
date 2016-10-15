@@ -65,8 +65,7 @@ service.matchFoundItems= function(searchitem,items)
 {
 
   var i="";
-  if(searchitem!="" && searchitem!=null )
-  {
+
   for(i=0;i<items.length;i++)
 {
   var searchitem =searchitem.toLowerCase();
@@ -77,7 +76,6 @@ service.matchFoundItems= function(searchitem,items)
     desc:items[i].description
   });
 
-}
 }
 console.log(found);
   return found;
