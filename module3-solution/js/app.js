@@ -27,7 +27,7 @@ var list = this;
 
 list.isEmpty = function()
 {
-  console.log(list.foundItem);
+  console.log(list.getNoOfItems);
 
 }
 
