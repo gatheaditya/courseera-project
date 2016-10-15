@@ -13,11 +13,11 @@ function foundItems()
 
 
 scope:{
- list: '<foundList'
+ list: '<foundList',
+
 },
 controller:'isEmptyController as list',
-// bindToController: true,
-controllerAs:'list2',
+bindToController: true,
 templateUrl:'foundList.html'
   };
   return ddo;
@@ -27,12 +27,8 @@ var list = this;
 
 list.isEmpty = function()
 {
-  if(list.itemFound.length==0)
-  {
-    return true;
-console.log(list.itemFound);
-  }
-  return false;
+  console.log(list.foundItem);
+
 }
 
 
