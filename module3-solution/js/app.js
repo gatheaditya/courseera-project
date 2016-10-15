@@ -14,11 +14,28 @@ templateUrl:'foundList.html',
 scope:{
  list: '<foundList'
 }
+controller:isEmpty,
+controllerAs:'list'
+bindToController:true
   };
   return ddo;
 
 }
 
+function isEmpty()
+{
+var list = this;
+
+list.empty = function()
+{
+  if(list.foundItem.length==0)
+  {
+    return true;
+  }
+  return false;
+};
+
+}
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
