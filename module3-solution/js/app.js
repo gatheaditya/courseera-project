@@ -24,6 +24,10 @@ templateUrl:'foundList.html'
 }
 function isEmptyController(){
 
+list.isEmpty = function()
+{
+  console.log(list.foundItem);
+}
 
 
 }
