@@ -23,14 +23,14 @@ templateUrl:'foundList.html'
   return ddo;
 }
 function isEmptyController(){
-
+var list = this;
 list.isEmpty = function()
 {
-  // if(list.itemFound.length)
-  // {
-  //   return true;
-  // }
-  // return false;
+  if(list.itemFound.length)
+  {
+    return true;
+  }
+  return false;
 }
 
 
