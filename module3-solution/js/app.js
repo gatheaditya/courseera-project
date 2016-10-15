@@ -9,7 +9,7 @@
 
   function ShoppingListDirective() {
     var ddo = {
-       templateUrl: 'shoppingList.html',
+       templateUrl: 'foundList.html',
        scope: {
          list: '<foundList',
          items: '<',
