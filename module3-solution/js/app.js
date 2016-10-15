@@ -13,14 +13,14 @@ function foundItems()
 
 scope:{
   list: '<foundList',
-  items: '=items'
+  items: '='
 },
 
 
 
  controller:'isEmptyController as list',
 templateUrl:'foundList.html',
-bindToController: false
+bindToController: true
   };
   return ddo;
 }
