@@ -15,7 +15,7 @@ scope:{
  foundList: '<foundList'
 },
 controller:isEmpty,
-controllerAs:'list',
+controllerAs:'list2',
 bindToController: true
   };
   return ddo;
