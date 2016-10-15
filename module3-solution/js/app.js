@@ -87,7 +87,7 @@ found=[];
 else {
   found=[];
 }
-console.log(serice.isEmpty.length);
+
   return found;
 }
 
