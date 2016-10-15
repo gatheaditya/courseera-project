@@ -27,7 +27,7 @@ scope:{
 function isEmptyController()
 {
 var list = this;
- console.log(list.items.length);
+ console.log(list.items);
 
 }
 
