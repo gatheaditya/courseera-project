@@ -24,13 +24,13 @@ templateUrl:'foundList.html'
 }
 function isEmptyController(){
 var list = this;
-  console.log('test');
+
 list.isEmpty = function()
 {
   if(list.itemFound.length==0)
   {
     return true;
-
+console.log('test');
   }
   return false;
 }
