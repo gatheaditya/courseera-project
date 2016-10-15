@@ -2,33 +2,50 @@
   'use strict';
   angular.module("NarrowItDownApp",[])
   .controller('NarrowItDownController', NarrowItDownController)
-  .controller('isEmptyController', isEmptyController)
+  // .controller('isEmptyController', isEmptyController)
   .factory('MenuSearchFactory', MenuSearchFactory)
-  .directive('foundItems',foundItems);
+  .directive('ShoppingListDirectiveController',ShoppingListDirectiveController);
 
 
-function foundItems()
-{
-  var ddo = {
+  function ShoppingListDirective() {
+    var ddo = {
+       templateUrl: 'shoppingList.html',
+       scope: {
+         list: '<foundList',
+         items: '<',
+       title: '@'
+       },
+       // controller: 'ShoppingListDirectiveController as list',
+     controller: ShoppingListDirectiveController,
+       controllerAs: 'list',
+       bindToController: true
+     };
 
-scope:{
-  list: '<foundList',
-  items: '<'
-},
 
-
-
- controller:'isEmptyController as list',
-templateUrl:'foundList.html',
-// bindToController: true
-
-  };
-  return ddo;
-}
+     return ddo;
+   }
+// function ShoppingListDirectiveController()
+// {
+//   var ddo = {
+//
+// scope:{
+//   list: '<foundList',
+//   items: '<'
+// },
+//
+//
+//
+//  controller:'isEmptyController as list',
+// templateUrl:'foundList.html',
+// // bindToController: true
+//
+//   };
+//   return ddo;
+// }
 
 
 //isEmpty funtion
-function isEmptyController()
+function ShoppingListDirectiveController()
 {
 var list = this;
 
