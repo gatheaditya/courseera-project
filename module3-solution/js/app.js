@@ -11,8 +11,8 @@ function foundItems()
 {
   var ddo = {
 scope:{ list: '<foundList'},
-controller:'isEmptyController as list',
-bindToController: true,
+// controller:'isEmptyController as list',
+// bindToController: true,
 templateUrl:'foundList.html'
   };
   return ddo;
