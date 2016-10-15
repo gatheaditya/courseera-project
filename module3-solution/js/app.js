@@ -12,7 +12,7 @@ function foundItems()
 
 
 scope:{
- foundList: '<'
+ foundList: '<foundList'
 },
 // controller:isEmpty,
 // bindToController: true,
