@@ -10,20 +10,18 @@
 function foundItems()
 {
   var ddo = {
-
-
-scope:{
- list: '<foundList'
-},
+scope:{ list: '<foundList'},
 controller:'isEmptyController as list',
 bindToController: true,
 templateUrl:'foundList.html'
   };
   return ddo;
 }
+
+
+//isEmpty funtion
 function isEmptyController(){
 var list = this;
-
 
 }
 
