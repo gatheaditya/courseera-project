@@ -10,13 +10,14 @@ function foundItems()
 {
   var ddo = {
 
-templateUrl:'foundList.html',
+
 scope:{
  foundList: '<foundList'
 },
 controller:isEmpty,
+bindToController: true,
 controllerAs:'list2',
-bindToController: true
+templateUrl:'foundList.html'
   };
   return ddo;
 
@@ -25,7 +26,6 @@ bindToController: true
 function isEmpty()
 {
 var list = this;
-
 list.empty = function()
 {
   if(list.foundItem.length==0)
