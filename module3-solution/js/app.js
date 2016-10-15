@@ -13,7 +13,7 @@ function foundItems()
 
 
 scope:{
- list: '<foundList'
+ list: '<'
 },
 controller:'isEmptyController as list',
 bindToController: true,
