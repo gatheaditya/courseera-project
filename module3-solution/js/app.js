@@ -2,8 +2,23 @@
   'use strict';
   angular.module("NarrowItDownApp",[])
   .controller('NarrowItDownController', NarrowItDownController)
-  .factory('MenuSearchFactory', MenuSearchFactory);
-  // .directive('NarrowItDownControllerDirective',NarrowItDownControllerDirective);
+  .factory('MenuSearchFactory', MenuSearchFactory)
+  .directive('foundItems',foundItems);
+
+
+function foundItems()
+{
+  var ddo = {
+
+templateUrl:'shoppingList.html',
+scope:{
+ list: '=foundList'
+}
+  };
+  return ddo;
+
+}
+
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
@@ -21,7 +36,6 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-
    })
    .catch(function (error) {
      console.log("Something went terribly wrong.");
@@ -32,7 +46,6 @@ list.itemFound = function(){
 list.removeItem = function(index){
 promise.then(function(response){
    MenuSearchService.removeItem(index);
-
 })
   .catch(function(error){
 });

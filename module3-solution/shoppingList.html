@@ -1,0 +1,6 @@
+
+<ul >
+<li ng-repeat="items in list.foundItem ">
+  {{items.name +'('+items.shortname +')'}}<button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button></li>
+</ul>
+{{ "Total items In list  "+  list.foundItem.length}}
