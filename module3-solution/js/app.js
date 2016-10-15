@@ -13,7 +13,7 @@ function foundItems()
 
 scope:{
   list: '<foundList',
-  items: '=items'
+  items: '=itemsList'
 },
  controller:'isEmptyController as list',
  templateUrl:'foundList.html',
@@ -27,7 +27,7 @@ scope:{
 function isEmptyController()
 {
 var list = this;
- console.log(list.items.length);
+ console.log(list.items);
 
 }
 
