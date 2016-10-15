@@ -23,7 +23,7 @@ templateUrl:'foundList.html'
   return ddo;
 
 }
-
+isEmptyController.$inject=['MenuSearchFactory','$http']
 function isEmptyController()
 {
 var list = this;
