@@ -14,9 +14,9 @@ templateUrl:'foundList.html',
 scope:{
  list: '<foundList'
 },
-// controller:NarrowItDownController,
-// controllerAs:'list',
-// bindToController: true
+controller:NarrowItDownController,
+ controllerAs:'list1',
+ bindToController: true
   };
   return ddo;
 
@@ -28,7 +28,7 @@ var list = this;
 
 list.empty = function()
 {
-  if(list.foundItem.length==0)
+  if(list1.foundItem.length==0)
   {
     return true;
   }
