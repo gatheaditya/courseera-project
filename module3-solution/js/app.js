@@ -11,8 +11,8 @@ function foundItems()
 {
   var ddo = {
 scope:{ list: '<foundList'},
-// controller:'isEmptyController as list',
-// bindToController: true,
+controller:'isEmptyController as list',
+bindToController: true,
 templateUrl:'foundList.html'
   };
   return ddo;
@@ -20,7 +20,8 @@ templateUrl:'foundList.html'
 
 
 //isEmpty funtion
-function isEmptyController(){
+function isEmptyController()
+{
 var list = this;
 
 }
@@ -41,7 +42,7 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-    
+
 
    })
    .catch(function (error) {
@@ -50,6 +51,7 @@ list.itemFound = function(){
 
 
 }
+//Remove Item function
 list.removeItem = function(index){
 promise.then(function(response){
    MenuSearchService.removeItem(index);
