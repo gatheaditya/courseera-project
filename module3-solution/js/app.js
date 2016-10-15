@@ -15,14 +15,16 @@ function foundItems()
 scope:{
  list: '<foundList'
 },
-// controller:'isEmptyController as list',
+controller:'isEmptyController as list',
 // bindToController: true,
-// controllerAs:'list2',
+controllerAs:'list2',
 templateUrl:'foundList.html'
   };
   return ddo;
 }
 function isEmptyController(){
+
+
 
 }
 
