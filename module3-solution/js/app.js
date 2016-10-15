@@ -71,7 +71,9 @@ for(i=0;i<items.length;i++)
   var searchitem =searchitem.toLowerCase();
   var item = items[i].name.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
-  found.push({name:items[i].name,shortname:items[i].short_name
+  found.push({name:items[i].name,
+    shortname:items[i].short_name,
+    desc:items[i].description
   });
 
 }

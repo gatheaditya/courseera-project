@@ -1,7 +1,10 @@
 
 <table class="table table-borderd">
 <tr ng-repeat="items in list.foundItem ">
-  <td>{{items.name +'('+items.shortname +')'}}</td><td><button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button>
+  <td>{{items.name +'('+items.shortname +')'}}</td>
+    <td>{{items.desc)'}}</td>
+  <td>
+    <button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button>
 </td>
 </table>
 {{ "Total items In list  "+  list.foundItem.length}}
