@@ -19,6 +19,10 @@ templateUrl:'foundList.html'
   };
   return ddo;
 }
+function isEmptyController()
+{
+  
+}
 
 
 
