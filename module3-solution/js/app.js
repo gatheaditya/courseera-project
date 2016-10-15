@@ -15,28 +15,14 @@ function foundItems()
 scope:{
  list: '<foundList'
 },
-controller:'isEmptyController as list',
-bindToController: true,
+// controller:'isEmptyController as list',
+// bindToController: true,
 // controllerAs:'list2',
 templateUrl:'foundList.html'
   };
   return ddo;
-
 }
-isEmptyController.$inject=['MenuSearchFactory','$http']
-function isEmptyController(MenuSearchFactory)
-{
-var list = this;
-list.empty = function()
-{
-  // if(list.length==0)
-  // {
-  //   return true;
-  // }
-  // return false;
-};
 
-}
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
