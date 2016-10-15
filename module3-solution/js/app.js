@@ -26,7 +26,11 @@ function isEmptyController(){
 
 list.isEmpty = function()
 {
-  console.log(list.foundItem);
+  if(list.itemFound.length)
+  {
+    return true;
+  }
+  return false;
 }
 
 
