@@ -25,10 +25,7 @@ templateUrl:'foundList.html'
 function isEmptyController(){
 var list = this;
 
-list.isEmpty = function()
-{
 
-}
 
 
 }
