@@ -12,9 +12,9 @@ function foundItems()
   var ddo = {
 scope:{
   list: '<foundList'
-},
+ },
 controller:'isEmptyController as list',
-bindToController: true,
+bindToController: true ,
 templateUrl:'foundList.html'
   };
   return ddo;
