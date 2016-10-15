@@ -15,7 +15,7 @@ function foundItems()
 scope:{
  foundList: '<foundList'
 },
-controller:'isEmptyController as foundList',
+controller:'isEmptyController as list',
 bindToController: true,
 // controllerAs:'list2',
 templateUrl:'foundList.html'
