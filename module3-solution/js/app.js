@@ -4,10 +4,10 @@
   .controller('NarrowItDownController', NarrowItDownController)
   // .controller('isEmptyController', isEmptyController)
   .factory('MenuSearchFactory', MenuSearchFactory)
-  .directive('ShoppingListDirectiveController',ShoppingListDirectiveController);
+  .directive('foundItems',foundItems);
 
 
-  function ShoppingListDirective() {
+  function foundItems() {
     var ddo = {
        templateUrl: 'foundList.html',
        scope: {
@@ -45,7 +45,7 @@
 
 
 //isEmpty funtion
-ShoppingListDirectiveController.$inject=['MenuSearchFactory'];
+
 function ShoppingListDirectiveController()
 {
 var list = this;
