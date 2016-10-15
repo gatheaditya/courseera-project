@@ -13,12 +13,11 @@ function foundItems()
 
 scope:{
   list: '<foundList',
-  items: '=items'
+  // items: '=items'
 },
  controller:'isEmptyController as list',
-
- bindToController: true,
-  templateUrl:'foundList.html'
+ templateUrl:'foundList.html',
+ bindToController: true
   };
   return ddo;
 }
@@ -28,7 +27,7 @@ scope:{
 function isEmptyController()
 {
 var list = this;
- console.log(list.items);
+ // console.log(list.items.length);
 
 }
 
@@ -48,7 +47,6 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-
 
 
    })
