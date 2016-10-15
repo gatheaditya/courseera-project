@@ -69,7 +69,7 @@ service.matchFoundItems= function(searchitem,items)
 {
   var searchitem =searchitem.toLowerCase();
   var item = items[i].name.toLowerCase();
-  if(item.search(searchitem)==-1 || searchitem!=""){continue;}
+  if(item.search(searchitem)==-1 || searchitem==""){continue;}
   found.push({name:items[i].name,
     shortname:items[i].short_name,
     desc:items[i].description
