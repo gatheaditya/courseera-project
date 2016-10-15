@@ -28,7 +28,7 @@ var list = this;
 
 list.empty = function()
 {
-  if(list1.foundItem.length==0)
+  if(list.foundItem.length==0)
   {
     return true;
   }
