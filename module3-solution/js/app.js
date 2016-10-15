@@ -20,6 +20,7 @@ scope:{
 
  controller:'isEmptyController as list',
 templateUrl:'foundList.html',
+bindToController: true
 
   };
   return ddo;
