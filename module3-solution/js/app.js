@@ -10,11 +10,12 @@
 function foundItems()
 {
   var ddo = {
+    templateUrl:'foundList.html',
+
 scope:{
   list: '<foundList'
- },
+ }
 
-templateUrl:'foundList.html'
   };
   return ddo;
 }
