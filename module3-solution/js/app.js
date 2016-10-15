@@ -65,7 +65,7 @@ service.matchFoundItems= function(searchitem,items)
 {
 
   var i="";
-  if(searchitem!="")
+  if(searchitem!="" && searchitem==null )
   {
   for(i=0;i<items.length;i++)
 {
