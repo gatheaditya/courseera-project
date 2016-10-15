@@ -17,23 +17,12 @@ scope:{
 },
 controller:'isEmptyController as list',
 bindToController: true,
-controllerAs:'list2',
 templateUrl:'foundList.html'
   };
   return ddo;
 }
 function isEmptyController(){
 var list = this;
-
-list.isEmpty = function()
-{
-  if(list.itemFound.length==0)
-  {
-    return true;
-console.log(list.itemFound);
-  }
-  return false;
-}
 
 
 }
