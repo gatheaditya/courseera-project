@@ -14,7 +14,7 @@ templateUrl:'foundList.html',
 scope:{
  list: '<foundList'
 },
-controller:isEmpty,
+ controller:isEmpty,
  controllerAs:'list1',
  bindToController: true
   };
