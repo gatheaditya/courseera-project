@@ -41,7 +41,7 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-    //  console.log(list.foundItem);
+     console.log(list.foundItem);
 
    })
    .catch(function (error) {
