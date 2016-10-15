@@ -12,11 +12,11 @@ function foundItems()
 
 
 scope:{
- foundList: '<foundList'
+ foundList: '<'
 },
-controller:isEmpty,
-bindToController: true,
-controllerAs:'list2',
+// controller:isEmpty,
+// bindToController: true,
+// controllerAs:'list2',
 templateUrl:'foundList.html'
   };
   return ddo;
