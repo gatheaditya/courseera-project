@@ -23,7 +23,7 @@
         color: green;
       }
       body{
-      background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9  )),url('images/1.jpg');
+      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9  )),url('images/1.jpg');
       color:white;
       background-repeat: no-repeat;
    background-attachment: fixed;
@@ -43,7 +43,7 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="list1.itemFound();">Narrow It Down For Me!</button>
     </div>
-    <div>
+    <div ng-if="list.foundItem">
       <!-- found-items should be implemented as a component -->
       <found-items found-list="list1"></found-items>
     </div>
