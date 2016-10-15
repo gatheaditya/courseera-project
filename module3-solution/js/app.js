@@ -15,9 +15,10 @@ scope:{
   list: '<foundList',
   items: '=itemsList'
 },
+ bindToController: true,
 templateUrl:'foundList.html',
- controller:'isEmptyController as list',
- bindToController: true
+ controller:'isEmptyController as list'
+
   };
   return ddo;
 }
