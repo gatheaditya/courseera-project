@@ -38,10 +38,10 @@
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group col-lg-8">
-      <input type="text" placeholder="search term" class="form-control" ng-model="list1.searchitem">
+      <input type="text" placeholder="search term" class="form-control" ng-model="list1.searchitem" ng-keyup="list1.itemFound();">
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-primary" ng-click="list1.itemFound();">Narrow It Down For Me!</button>
+      <button class="btn btn-primary" >Narrow It Down For Me!</button>
     </div>
     <div ng-show="list1.foundItem">
       <!-- found-items should be implemented as a component -->
