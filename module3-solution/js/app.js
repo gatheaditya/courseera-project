@@ -63,13 +63,14 @@ list.foundItem="";
 list.searchitem="";
 var promise = MenuSearchService.getMatchedMenuItems();
 
+
 list.itemFound = function(){
 
    promise.then(function (response) {
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-
+console.log(list.getNoOfItems);
 
    })
    .catch(function (error) {
