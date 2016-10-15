@@ -18,7 +18,7 @@ scope:{
 templateUrl:'foundList.html',
  controller:'isEmptyController as list',
 
- // bindToController: true
+ bindToController: true
   };
   return ddo;
 }
