@@ -13,7 +13,7 @@ function foundItems()
 templateUrl:'foundList.html',
 scope:{
  list: '<foundList'
-}
+},
 controller:isEmpty,
 controllerAs:'list'
 bindToController:true
