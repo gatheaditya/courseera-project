@@ -12,7 +12,7 @@ function foundItems()
 
 templateUrl:'foundList.html',
 scope:{
- list: '<'
+ list: '<foundList'
 }
   };
   return ddo;
