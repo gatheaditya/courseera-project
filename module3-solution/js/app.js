@@ -30,7 +30,7 @@ list.isEmpty = function()
   if(list.itemFound.length==0)
   {
     return true;
-console.log('test');
+console.log(list.itemFound.length);
   }
   return false;
 }
