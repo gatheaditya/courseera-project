@@ -77,7 +77,7 @@ service.matchFoundItems= function(searchitem,items)
   });
 
 }
-console.log(found);
+console.log(searchitem.length);
   return found;
 }
 
