@@ -64,6 +64,8 @@ function MenuSearchService($http)
 service.matchFoundItems= function(searchitem,items)
 {
 
+if(searchitem.length>0)
+{
   var i="";
 
   for(i=0;i<items.length;i++)
@@ -77,7 +79,8 @@ service.matchFoundItems= function(searchitem,items)
   });
 
 }
-console.log(searchitem.length);
+}
+console.log(found);
   return found;
 }
 
