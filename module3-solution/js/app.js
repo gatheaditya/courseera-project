@@ -13,11 +13,11 @@ function foundItems()
 
 scope:{
   list: '<foundList',
-  items: '=itemsList'
+  items: '=items'
 },
 
 
-bindToController: false,
+bindToController: true,
  controller:'isEmptyController as list',
 templateUrl:'foundList.html'
   };
