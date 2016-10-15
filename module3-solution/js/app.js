@@ -14,9 +14,9 @@ templateUrl:'foundList.html',
 scope:{
  foundList: '<foundList'
 }
-// controller:isEmpty,
-// controllerAs:'list'
-// bindToController:true
+controller:isEmpty,
+controllerAs:'list',
+bindToController: true
   };
   return ddo;
 
