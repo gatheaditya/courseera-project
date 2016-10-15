@@ -83,7 +83,9 @@ found=[];
 }//end for loop
 
 }//end if
-
+else {
+  found=[];
+}
 console.log(found);
   return found;
 }
