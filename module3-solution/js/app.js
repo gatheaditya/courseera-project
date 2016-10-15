@@ -31,7 +31,7 @@ bindToController: true
 function isEmptyController()
 {
 var list = this;
-  console.log(list.searchitem);
+
 
 }
 
