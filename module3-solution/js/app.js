@@ -26,11 +26,11 @@ function isEmptyController(){
 
 list.isEmpty = function()
 {
-  if(list.itemFound.length)
-  {
-    return true;
-  }
-  return false;
+  // if(list.itemFound.length)
+  // {
+  //   return true;
+  // }
+  // return false;
 }
 
 
