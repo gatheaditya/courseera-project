@@ -1,9 +1,9 @@
 
 <table class="table  table-bordered table-responsive table-condensed ">
-<tr ng-repeat="items in list.foundItem ">
+<tr ng-repeat="items in foundList.foundItem ">
   <td>{{items.name +'('+items.shortname +')'}}</td>
     <td>{{items.desc}}</td>
   <td>
-    <button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button>
+    <button class="btn btn-danger" ng-click="foundList.removeItem($index);">Don't want this one!</button>
 </td>
 </table>
