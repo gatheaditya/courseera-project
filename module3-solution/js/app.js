@@ -16,7 +16,7 @@ scope:{
 },
 controller:isEmpty,
 controllerAs:'list',
-bindToController:true
+bindToController: true
   };
   return ddo;
 
