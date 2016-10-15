@@ -13,7 +13,7 @@ function foundItems()
 
 scope:{
   list: '<foundList',
-  items: '=items'
+  items: '<'
 },
 
 
