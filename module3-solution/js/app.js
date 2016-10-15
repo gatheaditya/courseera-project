@@ -24,7 +24,7 @@ templateUrl:'foundList.html'
 }
 function isEmptyController(){
 var list = this;
-  console.log(list.itemFound);
+  console.log('test');
 list.isEmpty = function()
 {
   if(list.itemFound.length==0)
