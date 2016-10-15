@@ -17,7 +17,7 @@ scope:{
 },
 
 
-bindToController: true,
+bindToController: false,
  controller:'isEmptyController as list',
 templateUrl:'foundList.html'
   };
