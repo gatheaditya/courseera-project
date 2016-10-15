@@ -14,9 +14,9 @@ templateUrl:'foundList.html',
 scope:{
  list: '<foundList'
 },
-controller:NarrowItDownController,
-controllerAs:'list',
-bindToController: true
+// controller:NarrowItDownController,
+// controllerAs:'list',
+// bindToController: true
   };
   return ddo;
 
