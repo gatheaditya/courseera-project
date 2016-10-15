@@ -44,11 +44,11 @@
       <button class="btn btn-primary" ng-click="list1.itemFound();">Narrow It Down For Me!</button>
     </div>
 
-    <div >
+    <div ng-show="list1.searchItem.length">
       <!-- found-items should be implemented as a component -->
       <found-items found-list="list1"></found-items>
 
-      <div ng-if="!list1.found.length">
+      <div ng-show="!list1.found.length">
         <h3>Nothing found!</h3>
       </div>
 
