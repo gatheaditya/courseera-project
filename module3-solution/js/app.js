@@ -13,19 +13,19 @@ function foundItems()
 scope:{
   list: '<foundList'
  },
-controller:'isEmptyController as list',
-bindToController: true ,
+
 templateUrl:'foundList.html'
   };
   return ddo;
 }
+
+
+//isEmpty funtion
 function isEmptyController()
 {
-  
+var list = this;
+
 }
-
-
-
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
