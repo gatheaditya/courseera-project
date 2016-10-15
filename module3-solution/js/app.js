@@ -22,9 +22,8 @@ templateUrl:'foundList.html'
   };
   return ddo;
 }
-function isEmptyController()
-{
-  
+function isEmptyController(){
+
 }
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
