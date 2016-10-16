@@ -74,11 +74,10 @@ promise.then(function(response){
 }
  list.isEmpty = function()
  {
+   if(list.itemFound==0 && list.searchitem>0)
    return true;
-
  }
-
-
+ return false;
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
