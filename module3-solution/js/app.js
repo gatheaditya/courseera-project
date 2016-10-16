@@ -16,7 +16,7 @@
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
-     controller: ShoppingListDirectiveController,
+     controller: isEmpty,
        controllerAs: 'list',
        bindTocontroller: true,
         templateUrl: 'foundList.html'
