@@ -6,8 +6,9 @@
   <td>
     <button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button>
 </td>
-{{ "Total items In list  "+  items.foundItem.length}}
 </table>
 
+</div>
+<div ng-if="!list.isEmpty">{{ "Total items In list  "+  items.foundItem.length}}
 </div>
 <div class="error" ng-if="list.isEmpty"> nothing found</div>
