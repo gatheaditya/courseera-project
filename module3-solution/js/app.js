@@ -50,7 +50,7 @@
 function ShoppingListDirectiveController()
 {
 var list = this;
-console.log(list.itemFound);
+console.log(list.getNoOfItems);
 
 }
 
