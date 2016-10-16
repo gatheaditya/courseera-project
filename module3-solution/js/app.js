@@ -57,7 +57,7 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-     
+     list.isEmpty=MenuSearchService.isEmpty(list.searchitem,list.getItems);
    })
    .catch(function (error) {
      console.log("Something went terribly wrong.");
@@ -114,6 +114,13 @@ else {
 }
 
   return found;
+}
+
+
+service.isEmpty = function(searchitem,getItems)
+{
+  console.log(getItems.length);
+
 }
 
 service.removeItem = function(index)
