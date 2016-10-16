@@ -74,7 +74,7 @@ promise.then(function(response){
 }
  list.isEmpty = function()
  {
-   retuen true;
+   return true;
 
  }
 
