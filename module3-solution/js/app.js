@@ -2,7 +2,7 @@
   'use strict';
   angular.module("NarrowItDownApp",[])
   .controller('NarrowItDownController', NarrowItDownController)
-  .controller('isEmpty', isEmpty)
+  .controller('isEmptyController', isEmptyController)
   .factory('MenuSearchFactory', MenuSearchFactory)
   .directive('foundItems',foundItems);
 
@@ -16,7 +16,7 @@
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
-     controller: isEmpty,
+     controller: isEmptyController,
        controllerAs: 'list',
        bindTocontroller: true,
         templateUrl: 'foundList.html'
@@ -47,7 +47,7 @@
 
 //isEmpty funtion
 
-function isEmpty()
+function isEmptyController()
 {
 var list = this;
 console.log(list.itemFound.length);
