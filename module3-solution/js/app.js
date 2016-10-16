@@ -119,7 +119,11 @@ else {
 
 service.isEmpty = function(searchitem,getItems)
 {
-  console.log(getItems.length);
+  if(getItems.length==0 && searchitem==0)
+  {
+    return true;
+  }
+  return false;
 
 }
 
