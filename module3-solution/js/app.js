@@ -74,12 +74,9 @@ promise.then(function(response){
 }
  list.isEmpty = function()
  {
-   if( list.searchitem>0)
-   return true;
+
    console.log(list.foundItem.length);
- }
- return false;
-  console.log(list.foundItem.length+'from false');
+ 
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
