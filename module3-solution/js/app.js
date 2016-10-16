@@ -16,7 +16,18 @@
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
-     controller: ShoppingListDirectiveController,
+     controller = function ()
+     {
+
+       var list = this;
+       if(list.items)
+       {
+         return false;
+       }
+       return true;
+
+
+     },
        controllerAs: 'list',
        bindToController: false,
         templateUrl: 'foundList.html'
@@ -29,16 +40,7 @@
 
 //isEmpty funtion
 
-function ShoppingListDirectiveController()
-{
-var list = this;
-if(list.items)
-{
-  return false;
-}
-return true;
 
-}
 
 NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
