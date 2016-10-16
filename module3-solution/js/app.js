@@ -11,7 +11,7 @@
     var ddo = {
        templateUrl: 'foundList.html',
        scope: {
-         list: '=foundList',
+         list: '=',
          items: '=',
        title: '@'
        },
