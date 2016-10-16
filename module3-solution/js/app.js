@@ -72,12 +72,7 @@ promise.then(function(response){
   .catch(function(error){
 });
 }
- list.isEmpty = function()
- {
-
-   console.log(list.foundItem.length);
  
-}
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
