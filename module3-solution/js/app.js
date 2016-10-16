@@ -12,7 +12,7 @@
        templateUrl: 'foundList.html',
        scope: {
          list: '=',
-         items: '=',
+         items: '=items',
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
