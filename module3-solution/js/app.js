@@ -25,24 +25,6 @@
 
      return ddo;
    }
-// function ShoppingListDirectiveController()
-// {
-//   var ddo = {
-//
-// scope:{
-//   list: '<foundList',
-//   items: '<'
-// },
-//
-//
-//
-//  controller:'isEmptyController as list',
-// templateUrl:'foundList.html',
-// // bindToController: true
-//
-//   };
-//   return ddo;
-// }
 
 
 //isEmpty funtion
@@ -50,7 +32,7 @@
 function ShoppingListDirectiveController()
 {
 var list = this;
-console.log(list.getNoOfItems);
+console.log(list.items.getNoOfItems);
 
 }
 
