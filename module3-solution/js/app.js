@@ -57,7 +57,14 @@ list.itemFound = function(){
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
-
+     list.isEmpty= function()
+     {
+       if(list.searchitem=="" && list.getNoOfItems==0)
+       {
+         return true;
+       }
+       return false;
+     }
 
    })
    .catch(function (error) {
@@ -72,13 +79,13 @@ promise.then(function(response){
   .catch(function(error){
 });
 }
- list.isEmpty = function()
- {
-   if( list.searchitem>0)
-   return true;
- }
- return false;
-}
+//  list.isEmpty = function()
+//  {
+//    if( list.searchitem>0)
+//    return true;
+//  }
+//  return false;
+// }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
@@ -111,7 +118,7 @@ found=[];
 }//end if
 else {
   found=[];
-  
+
 }
 
   return found;
