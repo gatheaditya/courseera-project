@@ -34,9 +34,9 @@ function ShoppingListDirectiveController()
 var list = this;
 if(list.items)
 {
-  console.log('success');
+  return true;
 }
-console.log('not success');
+return false;
 
 }
 
