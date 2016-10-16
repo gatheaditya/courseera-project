@@ -79,13 +79,13 @@ promise.then(function(response){
   .catch(function(error){
 });
 }
-//  list.isEmpty = function()
-//  {
-//    if( list.searchitem>0)
-//    return true;
-//  }
-//  return false;
-// }
+ list.isEmpty1 = function()
+ {
+   if( list.searchitem>0)
+   return true;
+ }
+ return false;
+}
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
