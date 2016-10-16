@@ -2,7 +2,7 @@
   'use strict';
   angular.module("NarrowItDownApp",[])
   .controller('NarrowItDownController', NarrowItDownController)
-  .controller('ShoppingListDirectiveController', ShoppingListDirectiveController)
+  // .controller('ShoppingListDirectiveController', ShoppingListDirectiveController)
   .factory('MenuSearchFactory', MenuSearchFactory)
   .directive('foundItems',foundItems);
 
@@ -16,21 +16,21 @@
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
-     controller: function ()
-     {
-
-       var list = this;
-       if(list.items)
-       {
-         return false;
-       }
-       return true;
-
-
-     },
-       controllerAs: 'list',
-       bindToController: false,
-        templateUrl: 'foundList.html'
+    //  controller: function ()
+    //  {
+     //
+    //    var list = this;
+    //    if(list.items)
+    //    {
+    //      return false;
+    //    }
+    //    return true;
+     //
+     //
+    //  },
+    //    controllerAs: 'list',
+    //    bindToController: false,
+    //     templateUrl: 'foundList.html'
      };
 
 
