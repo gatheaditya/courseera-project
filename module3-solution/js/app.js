@@ -63,7 +63,6 @@ list.itemFound = function(){
    .catch(function (error) {
      console.log("Something went terribly wrong.");
    });
-
 }
 //Remove Item function
 list.removeItem = function(index){
@@ -73,6 +72,13 @@ promise.then(function(response){
   .catch(function(error){
 });
 }
+ list.isEmpty = function()
+ {
+   retuen true;
+
+ }
+
+
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
