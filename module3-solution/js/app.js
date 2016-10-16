@@ -111,6 +111,7 @@ found=[];
 }//end if
 else {
   found=[];
+  list.getNoOfItems="";
 }
 
   return found;
