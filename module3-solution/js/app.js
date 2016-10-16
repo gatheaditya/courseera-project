@@ -40,7 +40,7 @@ return true;
 
 }
 
-NarrowItDownController.$inject=['MenuSearchFactory'];
+NarrowItDownController.$inject=['MenuSearchFactory','$http'];
 function NarrowItDownController(MenuSearchFactory,$http)
 {
 
