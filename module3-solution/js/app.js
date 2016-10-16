@@ -79,6 +79,7 @@ promise.then(function(response){
    console.log(list.foundItem.length);
  }
  return false;
+  console.log(list.foundItem.length+'from false');
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
