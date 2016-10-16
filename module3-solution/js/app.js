@@ -74,7 +74,7 @@ promise.then(function(response){
 }
  list.isEmpty = function()
  {
-   if(list.itemFound==0 && list.searchitem>0)
+   if(list.itemFound.length==0 && list.searchitem>0)
    return true;
  }
  return false;
