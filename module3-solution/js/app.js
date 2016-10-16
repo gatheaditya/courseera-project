@@ -34,9 +34,9 @@ function ShoppingListDirectiveController()
 var list = this;
 if(list.items)
 {
-  return true;
+  return false;
 }
-return false;
+return true;
 
 }
 
