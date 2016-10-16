@@ -11,8 +11,8 @@
     var ddo = {
        templateUrl: 'foundList.html',
        scope: {
-         list: '=',
-         items: '=items',
+         list: '=foundList',
+         items: '=itemsList',
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
