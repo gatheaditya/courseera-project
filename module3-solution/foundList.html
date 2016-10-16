@@ -1,4 +1,4 @@
-
+<div>
 <table class="table   table-responsive table-condensed ">
 <tr ng-repeat="items1 in list.foundItem ">
   <td>{{items1.name +'('+items1.shortname +')'}}</td>
@@ -7,5 +7,6 @@
     <button class="btn btn-danger" ng-click="list.removeItem($index);">Don't want this one!</button>
 </td>
 </table>
-{{ "Total items In list  "+  items1.foundItem.length}}
+{{ "Total items In list  "+  items.foundItem.length}}
+</div>
 <!-- <div ng-if="list.isEmpty();"> test</div> -->
