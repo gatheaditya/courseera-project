@@ -50,7 +50,7 @@
 function ShoppingListDirectiveController()
 {
 var list = this;
-console.log(list.itemFound.length);
+console.log(list.itemFound);
 
 }
 
