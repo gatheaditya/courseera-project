@@ -16,7 +16,7 @@
        title: '@'
        },
        // controller: 'ShoppingListDirectiveController as list',
-     controller = function ()
+     controller: function ()
      {
 
        var list = this;
