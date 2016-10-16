@@ -64,7 +64,6 @@ list.itemFound = function(){
      console.log("Something went terribly wrong.");
    });
 
-
 }
 //Remove Item function
 list.removeItem = function(index){
@@ -73,8 +72,6 @@ promise.then(function(response){
 })
   .catch(function(error){
 });
-
-
 }
 }
 //meanuservice
