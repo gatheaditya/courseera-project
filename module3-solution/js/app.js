@@ -96,7 +96,7 @@ found=[];
   for(i=0;i<items.length;i++)
 {//begin for loop
   var searchitem =searchitem.toLowerCase();
-  var item = items[i].name.toLowerCase();
+  var item = items[i].description.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
   found.push
   ({
