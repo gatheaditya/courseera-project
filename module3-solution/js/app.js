@@ -96,7 +96,7 @@ found=[];
   for(i=0;i<items.length;i++)
 {//begin for loop
   var searchitem =searchitem.toLowerCase();
-  var item = items[i].description.toLowerCase();
+  var item = items[i].name.toLowerCase();
   if(item.search(searchitem)==-1){continue;}
   found.push
   ({
@@ -119,7 +119,7 @@ else {
 
 service.isEmpty = function(searchitem,getItems)
 {
-  if(getItems.length==0 || searchitem=="")
+  if(getItems.length==0 && searchitem=="")
   {
     return true;
   }
