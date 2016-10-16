@@ -32,7 +32,7 @@
 function ShoppingListDirectiveController()
 {
 var list = this;
-console.log(list.items.getNoOfItems);
+console.log(list.items);
 
 }
 
