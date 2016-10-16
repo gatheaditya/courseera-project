@@ -9,7 +9,7 @@
 
   function foundItems() {
     var ddo = {
-       templateUrl: 'foundList.html',
+
        scope: {
          list: '=foundList',
          items: '=itemsList',
@@ -18,7 +18,8 @@
        // controller: 'ShoppingListDirectiveController as list',
      controller: ShoppingListDirectiveController,
        controllerAs: 'list',
-       bindToController: false
+       bindToController: true,
+        templateUrl: 'foundList.html',
      };
 
 
