@@ -32,7 +32,7 @@
 function ShoppingListDirectiveController()
 {
 var list = this;
-if(list.foundList)
+if(list.items)
 {
   console.log('success');
 }
