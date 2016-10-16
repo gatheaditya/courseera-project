@@ -72,7 +72,7 @@ promise.then(function(response){
   .catch(function(error){
 });
 }
- 
+ }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
 function MenuSearchService($http)
