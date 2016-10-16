@@ -18,7 +18,7 @@
        // controller: 'ShoppingListDirectiveController as list',
      controller: ShoppingListDirectiveController,
        controllerAs: 'list',
-       bindTocontroller: true,
+       bindToController: true,
         templateUrl: 'foundList.html'
      };
 
