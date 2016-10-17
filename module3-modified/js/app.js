@@ -11,7 +11,7 @@
     var ddo = {
 
        scope: {
-         list: '=foundList',
+         list: '&foundList',
          items: '=itemsList',
        title: '@'
        },
