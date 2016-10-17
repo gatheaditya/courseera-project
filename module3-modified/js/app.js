@@ -152,7 +152,7 @@ found.splice(index,1);
 function MenuSearchFactory()
 {
 var factory = function(){
-  return new MenuSearchService();
+  return new MenuSearchService($http);
 };
 return factory;
 };
