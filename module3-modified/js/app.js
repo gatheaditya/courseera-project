@@ -51,7 +51,7 @@ list.searchitem="";
 var promise = MenuSearchService.getMatchedMenuItems();
 list.itemFound = function(){
 
-   promise.then(function (data) {
+   promise.then(function (response) {
      list.getItems = response.data.menu_items;
      list.getNoOfItems=response.data.menu_items.length;
      list.foundItem=MenuSearchService.matchFoundItems(list.searchitem,list.getItems);
@@ -91,8 +91,8 @@ function MenuSearchService($http)
         url:'https://davids-restaurant.herokuapp.com/menu_items.json'
       });
 
-      var data = response;
-      return data;
+
+      return response;
 
     }
 //function to get menu items
