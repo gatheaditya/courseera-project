@@ -40,11 +40,11 @@ return true;
 
 }
 
-NarrowItDownController.$inject=['MenuSearchFactory','$http'];
-function NarrowItDownController(MenuSearchFactory,$http)
+NarrowItDownController.$inject=['MenuSearchFactory'];
+function NarrowItDownController(MenuSearchFactory)
 {
 
-var MenuSearchService =  MenuSearchFactory($http);
+var MenuSearchService =  MenuSearchFactory();
 var list = this;
 list.foundItem="";
 list.searchitem="";
