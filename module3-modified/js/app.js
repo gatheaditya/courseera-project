@@ -4,7 +4,7 @@
   .controller('NarrowItDownController', NarrowItDownController)
   .controller('ShoppingListDirectiveController', ShoppingListDirectiveController)
   .factory('MenuSearchFactory', MenuSearchFactory)
-  .directive('foundItems',foundItems);
+  .directive('foundItems',ShoppingListDirectiveController);
 
 
   function foundItems() {
@@ -18,7 +18,7 @@
        // controller: 'ShoppingListDirectiveController as list',
      controller: ShoppingListDirectiveController,
        controllerAs: 'list',
-       bindTocontroller: true,
+       bindToController: true,
         templateUrl: 'foundList.html'
      };
 
