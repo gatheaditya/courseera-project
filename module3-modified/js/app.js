@@ -134,7 +134,7 @@ found.splice(index,1);
 
 }
 
-service.getMatchedMenuItems  = function()
+service.getMatchedMenuItems  = function($http)
 {
   var response = $http({
       method:'GET',
