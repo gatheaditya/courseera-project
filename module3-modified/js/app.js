@@ -82,8 +82,20 @@ function MenuSearchService($http)
 {
   var service= this;
   var found=[];
-  //function to get menu items
 
+  //Get items from server
+  service.getMatchedMenuItems  = function()
+  {
+    var response = $http({
+        method:'GET',
+        url:'https://davids-restaurant.herokuapp.com/menu_items.json'
+      });
+
+      var data = response;
+      return data;
+
+    }
+//function to get menu items
 service.matchFoundItems= function(searchitem,items)
 {
 
@@ -132,17 +144,6 @@ found.splice(index,1);
 
 }
 
-service.getMatchedMenuItems  = function($http)
-{
-  var response = $http({
-      method:'GET',
-      url:'https://davids-restaurant.herokuapp.com/menu_items.json'
-    });
-
-    var data = response;
-    return data;
-
-  }
 
 };
 
