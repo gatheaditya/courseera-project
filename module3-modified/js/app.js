@@ -149,7 +149,7 @@ found.splice(index,1);
 
 
 //factory to inject menuservice
-MenuSearchFactory.$inject=['$http']
+MenuSearchFactory.$inject=['$http'];
 function MenuSearchFactory($http)
 {
 var factory = function(){
