@@ -78,7 +78,7 @@ promise.then(function(response){
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
-function MenuSearchService()
+function MenuSearchService($http)
 {
   var service= this;
   var found=[];
@@ -132,7 +132,7 @@ found.splice(index,1);
 
 }
 
-service.getMatchedMenuItems  = function()
+service.getMatchedMenuItems  = function($http)
 {
   var response = $http({
       method:'GET',
