@@ -11,7 +11,7 @@
     var ddo = {
 
        scope: {
-         list: '&foundList',
+         list: '=foundList',
          items: '=itemsList',
        title: '@'
        },
@@ -25,10 +25,7 @@
 
      return ddo;
    }
-
-
 //isEmpty funtion
-
 function ShoppingListDirectiveController()
 {
 var list = this;
