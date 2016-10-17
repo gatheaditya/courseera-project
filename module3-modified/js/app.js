@@ -49,8 +49,6 @@ var list = this;
 list.foundItem="";
 list.searchitem="";
 var promise = MenuSearchService.getMatchedMenuItems();
-
-
 list.itemFound = function(){
 
    promise.then(function (response) {
@@ -80,7 +78,7 @@ promise.then(function(response){
 }
 //meanuservice
 MenuSearchFactory.$inject=['$http'];
-function MenuSearchService($http)
+function MenuSearchService()
 {
   var service= this;
   var found=[];
@@ -134,7 +132,7 @@ found.splice(index,1);
 
 }
 
-service.getMatchedMenuItems  = function($http)
+service.getMatchedMenuItems  = function()
 {
   var response = $http({
       method:'GET',
@@ -152,8 +150,8 @@ service.getMatchedMenuItems  = function($http)
 //factory to inject menuservice
 function MenuSearchFactory()
 {
-var factory = function($http){
-  return new MenuSearchService($http);
+var factory = function(){
+  return new MenuSearchService();
 };
 return factory;
 };
