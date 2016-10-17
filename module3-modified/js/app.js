@@ -90,10 +90,7 @@ function MenuSearchService($http)
         method:'GET',
         url:'https://davids-restaurant.herokuapp.com/menu_items.json'
       });
-
-
-      return response;
-
+    return response;
     }
 //function to get menu items
 service.matchFoundItems= function(searchitem,items)
@@ -120,13 +117,9 @@ found=[];
 }//end if
 else {
   found=[];
-
 }
-
   return found;
 }
-
-
 service.isEmpty = function(searchitem,getItems)
 {
   if(getItems.length==0 || searchitem=="")
@@ -136,18 +129,12 @@ service.isEmpty = function(searchitem,getItems)
   return false;
 
 }
-
 service.removeItem = function(index)
 {
   index = index++;
 found.splice(index,1);
-
 }
-
-
 };
-
-
 //factory to inject menuservice
 MenuSearchFactory.$inject=['$http'];
 function MenuSearchFactory($http)
