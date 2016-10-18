@@ -119,7 +119,7 @@ else {
 
 service.isEmpty = function(searchitem,getItems)
 {
-  if(getItems.length==0 && searchitem=="")
+  if(getItems.length==0 || searchitem=="")
   {
     return true;
   }
