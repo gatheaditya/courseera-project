@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <meta charset="utf-8">
+    <style>
+    #header
+    {
+      margin-top: 100px;
+    }
+    </style>
+    <title></title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="myApp.modulle.js"></script>
+    <script type="text/javascript" src="angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="routes.js"></script>
+    <script type="text/javascript" src="myApp.controller.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+
+    <div class= "container" ng-app="myApp">
+      <a ui-sref="test1">test1</a>
+      <a ui-sref="test2">test2</a>
+      <a ui-sref="test3">test3</a>
+<div>
+<ui-view></ui-view>
+</div>
+    </div>
+
+  </body>
+</html>
