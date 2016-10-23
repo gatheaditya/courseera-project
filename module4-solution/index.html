@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <meta charset="utf-8">
+    <style>
+
+    #header
+    { margin-top: 20px;  }
+    li[ui-sref]:hover
+    {
+      color: red;
+      cursor: pointer;
+    }
+    body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7  )),url('images/1.jpg');
+    color:white;
+    background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ font-style: italic;
+ font-weight: bold;
+      }
+      table tr{
+        margin: 5px;
+      }
+    </style>
+    <title></title>
+    <!-- //lib files -->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+    <!-- //script files -->
+    <script type="text/javascript" src="script/myApp.modulle.js"></script>
+    <script type="text/javascript" src="script/myApp.component.js"></script>
+    <script type="text/javascript" src="script/routes.js"></script>
+    <script type="text/javascript" src="script/myApp.controller.js"></script>
+      <script type="text/javascript" src="script/myApp.itemDetail.controller.js"></script>
+    <script type="text/javascript" src="script/myApp.service.js"></script>
+
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+<div id="header">
+<h1>My Resturant</h1>
+</div>
+    <div class= "container" ng-app="myApp">
+      <nav>
+      <a ui-sref="Home">Home</a>
+      <a ui-sref="Catogories">Catogories</a>
+      <a ui-sref="Items">Items</a>
+    </nav>
+<div>
+<ui-view></ui-view>
+</div>
+    </div>
+
+  </body>
+</html>
