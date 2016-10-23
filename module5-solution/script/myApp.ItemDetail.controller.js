@@ -7,7 +7,7 @@ function itemDetailController(items)
 {
 var ctrl2 = this;
 ctrl2.item = items.data.menu_items;
-console.log(items.data);
+
 
 
 
