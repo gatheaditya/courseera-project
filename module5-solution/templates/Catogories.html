@@ -1,5 +1,5 @@
 
 
   <ul ng-repeat="it in ctrl.item1  ">
-    <li ui-sref="Items({shortName:it.short_name})">{{it.name}}</li>
+    <li ui-sref="Items({shortName:it.short_name})"><span class="badge badge-primary">{{it.short_name}}</span>{{it.name}}</li>
   </ul>
