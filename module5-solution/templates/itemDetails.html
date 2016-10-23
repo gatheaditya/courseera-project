@@ -1,5 +1,10 @@
+<div class="container">
 
+  <ul class="list-group" >
+    <li ng-repeat="it in ctrl2.item" class="list-group-item"><h4>{{it.name}}</h4>
+      <p>Description:{{it.description}}</p>
+      <p>{{it.large_portion_name}}:${{it.price_large}}</p>
 
-  <ul ng-repeat="it in ctrl2.item  ">
-    <li >{{it.name}}</li>
+    </li>
   </ul>
+</div>
