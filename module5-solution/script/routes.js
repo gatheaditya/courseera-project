@@ -11,8 +11,8 @@ $urlRouterProvider.otherwise('/');
   $stateProvider.
   state('Catogories',
   {
-    url:'Catogories',
-    templateUrl:'templates/test.html' ,
+    url:'/Catogories',
+    templateUrl:'templates/Catogories.html' ,
     controller:'myAppController as ctrl',
     resolve:{
       item:['myAppService', function(myAppService){
@@ -22,14 +22,14 @@ $urlRouterProvider.otherwise('/');
   }).
   state('Home',
   {
-    url:'Home',
-    template:'test2'  }
+    url:'/',
+    templateUrl:'templates/Home.html'  }
 
   ).
   state('Items',
   {
-    url:'Items/{shortName}',
-    templateUrl:'templates/test1.html',
+    url:'/Items/{shortName}',
+    templateUrl:'templates/itemDetails.html',
     controller:'itemDetailController as ctrl2',
     resolve:{
       items:['myAppService','$stateParams',function(myAppService,$stateParams){
