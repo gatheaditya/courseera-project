@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <meta charset="utf-8">
+    <style>
+
+    #header
+    { margin-top: 20px;  }
+    li[ui-sref]{
+      list-style-type: none;
+      color:white;
+
+    }
+    li[ui-sref]:hover
+    {
+      color: white;
+      cursor: pointer;
+      list-style-type: none;
+      font-weight: bold;
+      color: red;
+    }
+    body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7  )),url('images/1.jpg');
+    color:white;
+    background-repeat: no-repeat;
+ background-attachment: fixed;
+  font-style: italic;
+      }
+      table tr{
+        margin: 5px;
+      }
+      #test
+      {
+        background-color: rgba(0,0,0,0.7);
+        display:block;
+        margin-left: 10px;
+        height: 130px;
+
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 20px;
+
+        border-color: white;
+      }
+      .list-group-item
+      {
+        background-color: transparent;
+        border-color: transparent;
+      }
+      .label {
+    border-radius: 1em;
+}
+.container{
+  margin-top: 30px;
+    background-color:linear-gradient(rgba(0,0,255,0.6),rgba(0,0,0,0.6));
+}
+    </style>
+    <title></title>
+      </head>
+  <body>
+
+    <div class= "container" ng-app="myApp">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="Home">ADDY's Resturant<span class="glyphicon glyphicon-cutlery"></span></a>
+          </div>
+          <ul class="nav navbar-nav">
+                  <li><a ui-sref="Home">Home</a></li>
+                  <li><a ui-sref="Items">Menu</a></li>
+                  <li><a ui-sref="Catogories">Catogories</a></li>
+
+          </ul>
+        </div>
+      </nav>
+
+<div class="col-xs-12 col-sm-6 col-md-8">
+<ui-view></ui-view>
+</div>
+    </div>
+    <!-- //lib files -->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+    <!-- //script files -->
+    <script type="text/javascript" src="script/myApp.modulle.js"></script>
+    <script type="text/javascript" src="script/myApp.component.js"></script>
+    <script type="text/javascript" src="script/routes.js"></script>
+      <script type="text/javascript" src="script/myApp.item.js"></script>
+    <script type="text/javascript" src="script/myApp.controller.js"></script>
+
+    <script type="text/javascript" src="script/myApp.service.js"></script>
+
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
