@@ -3,13 +3,13 @@
 angular.module('myApp')
 .controller('myAppController',myAppController);
 
-myAppController.$inject = ['item','items'];
-function myAppController(item,items)
+myAppController.$inject = ['item'];
+function myAppController(item)
 {
 var ctrl = this;
 ctrl.item1=item.data;
 
-ctrl.item = items.data.menu_items;
+
 
 // console.log(itemDetails);
 }

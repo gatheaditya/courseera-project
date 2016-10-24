@@ -19,9 +19,7 @@ $urlRouterProvider.otherwise('/');
       item:['myAppService', function(myAppService){
       return myAppService.getAllCategories();
     }]
-    items:['myAppService','$stateParams',function(myAppService,$stateParams){
-      return myAppService.getItemsForCategory($stateParams.shortName);
-    }]
+
   }
   }).
   state('Home',
@@ -40,16 +38,6 @@ $urlRouterProvider.otherwise('/');
         return myAppService.getItemsForCategory($stateParams.shortName);
       }]
     }
-    state('Catogories1',
-    {
-      url:'/Catogories1/{shortName}',
-      templateUrl:'templates/Catogories.html',
-      controller:'myAppController as ctrl',
-      resolve:{
-        items:['myAppService','$stateParams',function(myAppService,$stateParams){
-          return myAppService.getItemsForCategory($stateParams.shortName);
-        }]
-      }
 
   });
 

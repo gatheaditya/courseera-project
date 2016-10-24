@@ -35,6 +35,12 @@
         background-color: transparent;
         border-color: transparent;
       }
+      .label {
+    border-radius: 1em;
+}
+.container{
+  margin-top: 10px;
+}
     </style>
     <title></title>
       </head>
@@ -44,21 +50,19 @@
 
 </div>
     <div class= "container" ng-app="myApp">
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" sref="#">My Resturant</a>
+            <a class="navbar-brand" sref="#">ADDY's Resturant<span class="glyphicon glyphicon-cutlery"></span></a>
           </div>
           <ul class="nav navbar-nav">
-
-              <li><a ui-sref="Home">Home</a></li>
-
-            <li><a ui-sref="Catogories">Catogories</a></li>
-                <li><a ui-sref="Catogories1">Items</a></li>
+                  <li><a ui-sref="Home">Home</a></li>
+                  <li><a ui-sref="Catogories">Catogories</a></li>
+                  <li><a ui-sref="Items">Items</a></li>
           </ul>
         </div>
       </nav>
-<div>
+<div class="col-xs-12 col-sm-6 col-md-8">
 <ui-view></ui-view>
 </div>
     </div>
