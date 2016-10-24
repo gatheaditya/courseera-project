@@ -19,6 +19,9 @@ $urlRouterProvider.otherwise('/');
       item:['myAppService', function(myAppService){
       return myAppService.getAllCategories();
     }]
+    items:['myAppService','$stateParams',function(myAppService,$stateParams){
+      return myAppService.getItemsForCategory($stateParams.shortName);
+    }]
   }
   }).
   state('Home',
