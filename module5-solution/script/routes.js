@@ -40,9 +40,9 @@ $urlRouterProvider.otherwise('/');
         return myAppService.getItemsForCategory($stateParams.shortName);
       }]
     }
-    state('Catogories',
+    state('Catogories1',
     {
-      url:'/Catogories/{shortName}',
+      url:'/Catogories1/{shortName}',
       templateUrl:'templates/Catogories.html',
       controller:'myAppController as ctrl',
       resolve:{
