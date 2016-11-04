@@ -3,10 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/css/style.css" media="screen" title="no title">
   </head>
   <body>
-<script type="text/javascript" src="angular.js"></script>
-<script type="text/javascript" src="angular-ui-router.min.js"></script>
-<script type="text/javascript" src="users.js"></script>
+<div  ng-app="users">
+<div class="container">
+
+
+  <div class="navbar navbar-inverse">
+    <ul>
+      <li class="navbar-item"><a href="#">one</a></li>
+      <li><a href="#">two</a></li>
+      <li><a href="#">three</a></li>
+    </ul>
+
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+<div ng-controller="userController as ctrl">
+  <user-component></user-component>
+</div>
+
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/users.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
   </body>
 </html>

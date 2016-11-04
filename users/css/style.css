@@ -1,0 +1,45 @@
+#menu
+{
+  background-color: orange;
+  position: fixed;
+  width: 100%;
+}
+input[type=text]
+{
+  margin-bottom: 5px;
+  
+}
+.adi
+{
+  margin:10px;
+  border:1px solid blue;
+  background-color: transparent;
+  color: blue;
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+}
+.adi:hover{
+  background-color:grey;;
+  color: white;
+    font-weight: bold;
+}
+#menu  li {
+  list-style: none;
+  float: left;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+
+}
+
+a:hover
+{
+  text-decoration: none;
+}
+
+#menu li a{
+  color: white;
+}
