@@ -10,7 +10,7 @@ service.getAllCategories = function ()
 {
    var response = $http({
     method:'GET',
-    url:'https://davids-restaurant.herokuapp.com/categories.json'
+    url:'http://gatheresserver.herokuapp.com/categories.json'
   })
   return response;
 
@@ -20,7 +20,7 @@ service.getItemsForCategory = function(shortName)
 {
   var response = $http({
    method:'GET',
-   url:'https://davids-restaurant.herokuapp.com/menu_items.json?category='+shortName
+   url:'http://gatheresserver.herokuapp.com/menu_items.json?category='+shortName
  })
  return response;
 
