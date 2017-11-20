@@ -1,5 +1,20 @@
 
 <div class="container">
+  
+  <div class="container">
+
+    <div ng-repeat="it in ctrl.item1" class="card" style="width: 20rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a ui-sref="Items({shortName:it.short_name})" class="btn btn-primary">{{it.short_name}}</a>
+        </div>
+      </div>
+
+  
+  
+  
   <div>
   <ul ng-repeat="it in ctrl.item1  ">
     <li ui-sref="Items({shortName:it.short_name})"><span class="label label-primary">{{it.short_name}}</span>{{it.name}}</li>
