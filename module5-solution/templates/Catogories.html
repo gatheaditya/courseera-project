@@ -1,18 +1,11 @@
-
-
-  < div class="container">
+ 
   
-   
-<div class="card" style="width: 18rem;" ng-repeat="it in ctrl.item1">
-  <img class="card-img-top" src="images/menu/{{it.short_name}}/{{it.short_name}}.jpg"  alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{it.name}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a ui-sref="Items({shortName:it.short_name})" class="btn btn-primary">{{it.short_name}}</a>
-  </div>
-</div>
-</div>
-  
-  
+  <div class="container">
+  <p></p>  
+  <ul class="list-group">
+  <a style="text-decoration:none"  ng-repeat="it in ctrl.item1"  ui-sref="Items({shortName:it.short_name})" target="_blank"y>
+  <li class="list-group-item"   ><h3 class="lead">{{it.name}}</h3><br>
+      </li></a>
+</ul></div>
 
 
