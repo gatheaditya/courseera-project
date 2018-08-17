@@ -2,13 +2,15 @@
 
   
   <div class="container">
+    <div class="card-columns">
   <div  ng-repeat="it in ctrl.item1" class="card img-fluid" style="width:500px">
- <img class="card-img-top" src="images/menu/{{it.short_name}}/{{it.short_name}}.jpg" alt="Card image" style="width:100%">
+ <img class="card-img-top" src="images/menu/{{it.short_name}}/{{it.short_name}}.jpg" alt="Card image" style="width:150px">
   <div class="card-img-overlay">
     <h4 class="card-title">{{it.name}}</h4>
     <p class="card-text">{{it.name}}</p>
      <a ui-sref="Items({shortName:it.short_name})" class="btn btn-primary">{{it.short_name}}</a>
   </div>
+</div>
 </div>
 </div>
   
